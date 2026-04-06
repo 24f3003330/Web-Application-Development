@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - ShopCart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR (Flexbox) -->
+    <nav class="navbar">
+        <div class="logo">🛒 ShopCart</div>
+        <div class="nav-links">
+            <span id="welcomeMsg"></span>
+            <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- CATALOG (CSS Grid) -->
+    <div class="catalog-container">
+        <h2>Our Products</h2>
+
+        <section class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://avstore.in/cdn/shop/files/1.AVStore-Sonos-Ace-Front-Angled-View-Hero-Black.jpg?v=1725620870"
+                         alt="Wireless Headphones">
+                </div>
+                <div class="product-info">
+                    <h3>Wireless Headphones</h3>
+                    <div class="product-price">₹2,499</div>
+                    <button class="btn-primary" onclick="addToCart('Wireless Headphones', 2499)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://gourban.in/cdn/shop/files/Pulse.jpg?v=1749553994&width=2048"
+                         alt="Smart Watch">
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watch</h3>
+                    <div class="product-price">₹3,999</div>
+                    <button class="btn-primary" onclick="addToCart('Smart Watch', 3999)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://www.campusshoes.com/cdn/shop/files/VESPER_VESPER_WHT-MILKY_BLU_07.webp?v=1758174807"
+                         alt="Running Shoes">
+                </div>
+                <div class="product-info">
+                    <h3>Running Shoes</h3>
+                    <div class="product-price">₹1,299</div>
+                    <button class="btn-primary" onclick="addToCart('Running Shoes', 1299)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJzVJmYch065vz3r17fNZgH1qVbrL9kZG0Dw&s"
+                         alt="Backpack">
+                </div>
+                <div class="product-info">
+                    <h3>Backpack</h3>
+                    <div class="product-price">₹899</div>
+                    <button class="btn-primary" onclick="addToCart('Backpack', 899)">Add to Cart</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        loadDashboard();
+        updateCartCount();
+    </script>
+
+</body>
+</html>
