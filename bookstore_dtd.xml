@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<bookstore>
+    <book id="B101">
+        <title>XML &amp; Web Services</title>
+        <genre>Computer</genre>
+        <author>
+            <name>John Doe</name>
+            <email>jdoe@example.com</email>
+        </author>
+        <price currency="USD">49.95</price>
+        <publish_date>2025-01-15</publish_date>
+        <isbn>978-1-23456-789-7</isbn>
+    </book>
+    <book id="B102">
+        <title>Advanced XML Techniques</title>
+        <genre>Software Engineering</genre>
+        <author>
+            <name>Jane Smith</name>
+            <email>jsmith@books.org</email>
+        </author>
+        <price currency="EUR">59.50</price>
+        <publish_date>2024-11-22</publish_date>
+        <isbn>978-9-87654-321-0</isbn>
+    </book>
+    <book id="B103">
+        <title>Data Structures in Depth</title>
+        <genre>Computer Science</genre>
+        <author>
+            <name>Robert C. Martin</name>
+            <email>unclebob@cs.org</email>
+        </author>
+        <price currency="USD">39.99</price>
+        <publish_date>2023-05-10</publish_date>
+        <isbn>978-0-98765-432-1</isbn>
+    </book>
+    <book id="B104">
+        <title>Clean Code Principles</title>
+        <genre>Programming</genre>
+        <author>
+            <name>Martin Fowler</name>
+            <email>mfowler@clean.org</email>
+        </author>
+        <price currency="GBP">45.00</price>
+        <publish_date>2022-08-30</publish_date>
+        <isbn>978-1-99887-654-3</isbn>
+    </book>
+</bookstore>
