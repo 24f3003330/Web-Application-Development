@@ -1,0 +1,12 @@
+<!ELEMENT bookstore (book+)>
+<!ELEMENT book (title, genre, author, price, publish_date, isbn)>
+<!ATTLIST book id ID #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT author (name, email)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price currency (USD|EUR|GBP|INR) "USD">
+<!ELEMENT publish_date (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
