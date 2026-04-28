@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ShopCart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR (Flexbox) -->
+    <nav class="navbar">
+        <div class="logo">🛒 ShopCart</div>
+        <div class="nav-links">
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+
+    <!-- LOGIN CARD (Flexbox centred) -->
+    <div class="auth-wrapper">
+        <div class="auth-card">
+
+            <h2>Login</h2>
+
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" placeholder="Password">
+            </div>
+
+            <button class="btn-primary" onclick="login()">Login</button>
+
+            <div class="auth-footer">
+                No account? <a href="register.html">Register here</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

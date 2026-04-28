@@ -1,0 +1,301 @@
+/* ============================================
+   SHOPPING CART APP - SIMPLE CSS
+   Uses: CSS Variables, Flexbox, Grid,
+         Transitions, Media Queries (CSS3)
+   ============================================ */
+
+/* ----- 1. CSS VARIABLES (Custom Properties) ----- */
+:root {
+    --blue:   #2563eb;  /* main color   */
+    --dark:   #1e293b;  /* dark text    */
+    --gray:   #64748b;  /* light text   */
+    --light:  #f1f5f9;  /* background   */
+    --white:  #ffffff;
+    --radius: 8px;
+}
+
+/* ----- 2. RESET ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    min-height: 100vh;
+}
+
+/* ===================================================
+   NAVBAR  —  uses FLEXBOX
+   =================================================== */
+.navbar {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+
+    /* FLEXBOX: puts logo on left, links on right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid var(--light);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;       /* flex row */
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-links a,
+.nav-links button {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* CSS3 TRANSITION */
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+    color: var(--blue);
+}
+
+/* ===================================================
+   BUTTON
+   =================================================== */
+.btn-primary {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    width: 100%;
+    /* CSS3 TRANSITION */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;     /* darker blue */
+    transform: translateY(-1px);   /* small lift */
+}
+
+/* ===================================================
+   AUTH PAGES (Login & Register)
+   Uses FLEXBOX to centre the card
+   =================================================== */
+.auth-wrapper {
+    /* FLEXBOX: centre card on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);   /* full viewport minus navbar */
+    padding: 2rem;
+}
+
+.auth-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    /* FLEXBOX: stack elements vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Form group: label above input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 0.65rem;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    outline: none;
+    /* CSS3 TRANSITION */
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--blue);
+}
+
+.auth-footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.auth-footer a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===================================================
+   CATALOG PAGE
+   Uses CSS GRID for product cards
+   =================================================== */
+.catalog-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.catalog-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* CSS GRID: responsive card layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    /* FLEXBOX: stack content inside each card */
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    /* CSS3 TRANSITION */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    background-color: var(--light);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-info h3 {
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.product-price {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ===================================================
+   CART PAGE
+   =================================================== */
+.cart-page {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.cart-page h2 {
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+}
+
+.cart-items {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 1.2rem;
+}
+
+/* FLEXBOX: each item in a row */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--light);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-summary {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    /* FLEXBOX: stack total and button */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.total-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: right;
+    color: var(--dark);
+}
+
+/* ===================================================
+   RESPONSIVE  —  CSS3 MEDIA QUERY
+   =================================================== */
+@media (max-width: 600px) {
+
+    /* Navbar stacks vertically on mobile */
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* Grid becomes 1 column on small screens */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
