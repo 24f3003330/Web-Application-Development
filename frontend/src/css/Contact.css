@@ -1,0 +1,4 @@
+/* reuse card layout but align nicely */
+body {
+    overflow-x: hidden;
+  }
