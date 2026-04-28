@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg,#e0eafc,#cfdef3);
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+a {
+    display:block;
+    text-align:center;
+    margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Product Catalog</h2>
+
+<div style="text-align:right; padding:10px;">
+    <a href="cart" style="background:#ff9800;color:white;padding:10px;text-decoration:none;border-radius:5px;">
+        View Cart
+    </a>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Product 1</h3>
+<p>500/-</p>
+<form action="controller" method="post">
+<input type="hidden" name="action" value="addcart">
+<input type="hidden" name="pname" value="Product 1">
+<input type="hidden" name="price" value="500">
+<button type="submit">Add to Cart</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Product 2</h3>
+<p>800/-</p>
+<form action="controller" method="post">
+<input type="hidden" name="action" value="addcart">
+<input type="hidden" name="pname" value="Product 2">
+<input type="hidden" name="price" value="800">
+<button type="submit">Add to Cart</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Product 3</h3>
+<p>1000/-</p>
+<form action="controller" method="post">
+<input type="hidden" name="action" value="addcart">
+<input type="hidden" name="pname" value="Product 3">
+<input type="hidden" name="price" value="1000">
+<button type="submit">Add to Cart</button>
+</form>
+</div>
+
+</div>
+</body>
+</html>
